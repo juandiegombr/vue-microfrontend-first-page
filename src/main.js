@@ -3,6 +3,9 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+window.renderFirst = (containerId, router) => {
+  new Vue({
+    router,
+    render: h => h(App),
+  }).$mount(`#${containerId}`)
+}

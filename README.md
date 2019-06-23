@@ -1,4 +1,4 @@
-# micro
+# MicroFrontend First Page
 
 ## Project setup
 ```

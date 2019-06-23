@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="First-container" class="page">
+    <h1>First Microfrontend</h1>
+    <p>This is a MicroFrontend comming from a remote project</p>
+    <button @click="goHome">Go home from MicroFrontend</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  name: 'First',
+  methods: {
+    goHome () {
+      console.log(this)
+      this.$router.push('/')
+    }
+  },
+  created () {
+    console.log('First Microfrontend created!')
+  },
+  beforeDestroy() {
+    console.log('First Microfrontend destroyed!')
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#First-container {
+  color: red
 }
 </style>
